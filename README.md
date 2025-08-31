@@ -45,7 +45,7 @@ risks missing better arms.
 - Always choose the arm with the highest estimated value.  
 - Simple but can get stuck in suboptimal arms.
 
-📊 **Plot**: See [docs/epsilon_greedy.jpeg](docs/epsilon_greedy.jpeg)
+![Greedy](docs/epsilon_greedy.jpeg)
 
 ---
 
@@ -59,7 +59,7 @@ Special cases:
 - **ε = 1** → Completely exploratory agent.  
 - **ε = 0** → Purely greedy agent.  
 
-📊 **Plot**: See [docs/epsilon_greedy.jpeg](docs/epsilon_greedy.jpeg)
+![ε-Greedy](docs/epsilon_greedy.jpeg)
 
 ---
 
@@ -81,8 +81,8 @@ Special cases:
 - Early on, the agent explores heavily.  
 - Later, it focuses more on exploitation.  
 
-📊 **Plot**: See [docs/decayed_epsilon.jpeg](docs/decayed_epsilon.jpeg)  
-📊 **Sweep**: See [docs/decayed_epsilon_sweep.jpeg](docs/decayed_epsilon_sweep.jpeg)
+![Decayed ε](docs/decayed_epsilon.jpeg)  
+![Decayed ε Sweep](docs/decayed_epsilon_sweep.jpeg)
 
 ---
 
@@ -94,9 +94,8 @@ Special cases:
 - **High τ** → More exploration.  
 - **Low τ** → More exploitation.  
 
-📊 **Plot**: See [docs/softmax.jpeg](docs/softmax.jpeg)  
-📊 **Sweep**: See [docs/softmax_tau_sweep.jpeg](docs/softmax_tau_sweep.jpeg)
-
+![Softmax](docs/softmax.jpeg)  
+![Softmax Sweep](docs/softmax_tau_sweep.jpeg)
 ---
 
 ### 5. **Annealed Softmax**
@@ -105,7 +104,7 @@ Special cases:
   $$ \tau_t = \tau_0 \times \text{decay}^t $$
 - Starts exploratory, then gradually becomes greedy.  
 
-📊 **Plot**: See [docs/annealed_softmax.jpeg](docs/annealed_softmax.jpeg)
+![Annealed Softmax](docs/annealed_softmax.jpeg)
 
 ---
 
@@ -115,8 +114,7 @@ Special cases:
   $$ Q(a) + \sqrt{\frac{2 \ln t}{N(a)}} $$
 - Encourages trying less-sampled arms while converging to the optimal one.  
 
-📊 **Plot**: See [docs/ucb1.jpeg](docs/ucb1.jpeg)
-
+![UCB1](docs/ucb1.jpeg)
 ---
 
 ### 7. **Thompson Sampling**
@@ -124,7 +122,7 @@ Special cases:
 - A **Bayesian approach**: sample from the posterior distribution of each arm’s reward.  
 - Naturally balances exploration and exploitation.  
 
-📊 **Plot**: See [docs/thompson.jpeg](docs/thompson.jpeg)
+![Thompson Sampling](docs/thompson.jpeg)
 
 ---
 
@@ -150,6 +148,9 @@ Averaged over **50 runs** and **5000 episodes** with bandits $[0.5, 0.6, 0.4]$.
 | Softmax (τ=2)             | 0.5045           | 477.7000     |
 | ε-Greedy (ε=0)            | 0.5011           | 494.5600     |
 | ε-Greedy (ε=1)            | 0.4982           | 508.8200     |
+
+**Combined Overview Plot:**  
+![All Strategies](docs/all_strategies.jpeg)
 
 ---
 
