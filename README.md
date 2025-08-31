@@ -77,7 +77,7 @@ Special cases:
 
 - Starts with a high exploration rate $ε_0$ and gradually decreases
   it over time:  
-  $$ \epsilon_t = \epsilon_0 \times \text{decay}^t $$
+  `ε_t = ε0 × decay^t`
 - Early on, the agent explores heavily.  
 - Later, it focuses more on exploitation.  
 
