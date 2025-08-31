@@ -1,0 +1,19 @@
+Strategy,Final Avg Reward,Total Regret
+ε-Greedy (0.1),0.5816,92.2400
+Decayed ε,0.5889,55.7000
+Softmax (τ=0.1),0.5597,201.3800
+Annealed Softmax,0.5611,194.5600
+UCB1,0.5777,111.2800
+Thompson Sampling,0.5939,30.7000
+ε-Greedy (ε=0),0.5011,494.5600
+ε-Greedy (ε=0.1),0.5836,82.0200
+ε-Greedy (ε=0.5),0.5501,249.5000
+ε-Greedy (ε=1),0.4988,506.1000
+Softmax (τ=0.01),0.5139,430.3000
+Softmax (τ=0.5),0.5125,437.2600
+Softmax (τ=1),0.5069,465.3000
+Softmax (τ=2),0.5045,477.7000
+Decayed ε (decay=0.99),0.5818,90.9200
+Decayed ε (decay=0.999),0.5874,62.9600
+Decayed ε (decay=0.9995),0.5799,100.3600
+Decayed ε (decay=0.9999),0.5605,197.7200
