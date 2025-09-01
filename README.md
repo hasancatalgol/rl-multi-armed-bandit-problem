@@ -78,7 +78,7 @@ Special cases:
 - Starts with a high exploration rate $ε_0$ and gradually decreases
   it over time:  
 
-  <img src="https://render.githubusercontent.com/render/math?math=\epsilon_t=\epsilon_0\cdot decay^t">
+  $\epsilon_t=\epsilon_0 \cdot \mathrm{decay}^t$
 
 
 - Early on, the agent explores heavily.  
