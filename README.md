@@ -91,15 +91,10 @@ Special cases:
 
 ### 4. **Softmax (Boltzmann Exploration)**
 
-- Selects arms probabilistically based on their estimated rewards.
-- Uses a **temperature parameter τ**:
-
-    $$
-    P(a) = \frac{e^{Q(a)/\tau}}{\sum_{j} e^{Q(j)/\tau}}
-    $$
-
-- **High τ** → More exploration.
-- **Low τ** → More exploitation.
+- Selects arms probabilistically based on their estimated rewards.  
+- Uses a **temperature parameter τ**:  
+- **High τ** → More exploration.  
+- **Low τ** → More exploitation.  
 
 ![Softmax](docs/softmax.jpeg)  
 ![Softmax Sweep](docs/softmax_tau_sweep.jpeg)
@@ -108,7 +103,6 @@ Special cases:
 ### 5. **Annealed Softmax**
 
 - A variation of Softmax where the temperature $τ$ decreases over time:  
-  $$ \tau_t = \tau_0 \times \mathrm{decay}^t $$
 - Starts exploratory, then gradually becomes greedy.  
 
 ![Annealed Softmax](docs/annealed_softmax.jpeg)
@@ -118,7 +112,6 @@ Special cases:
 ### 6. **Upper Confidence Bound (UCB1)**
 
 - Chooses the arm based on both its average reward and the uncertainty:  
-  $$ Q(a) + \sqrt{\frac{2 \ln t}{N(a)}} $$
 - Encourages trying less-sampled arms while converging to the optimal one.  
 
 ![UCB1](docs/ucb1.jpeg)
