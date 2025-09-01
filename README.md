@@ -93,9 +93,7 @@ Special cases:
 
 - Selects arms probabilistically based on their estimated rewards.  
 - Uses a **temperature parameter τ**:  
-  $$
-  P(a) = \frac{e^{Q(a)/\tau}}{\sum_{j} e^{Q(j)/\tau}}
-  $$
+  $P(a) = \frac{e^{Q(a)/\tau}}{\sum_{j} e^{Q(j)/\tau}}$
 - **High τ** → More exploration.  
 - **Low τ** → More exploitation.  
 
