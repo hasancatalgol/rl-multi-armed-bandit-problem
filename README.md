@@ -91,13 +91,15 @@ Special cases:
 
 ### 4. **Softmax (Boltzmann Exploration)**
 
-- Selects arms probabilistically based on their estimated rewards.  
-- Uses a **temperature parameter τ**:  
-  $$
-  P(a) = \frac{e^{Q(a)/\tau}}{\sum_{j} e^{Q(j)/\tau}}
-  $$
-- **High τ** → More exploration.  
-- **Low τ** → More exploitation.  
+- Selects arms probabilistically based on their estimated rewards.
+- Uses a **temperature parameter τ**:
+
+    $$
+    P(a) = \frac{e^{Q(a)/\tau}}{\sum_{j} e^{Q(j)/\tau}}
+    $$
+
+- **High τ** → More exploration.
+- **Low τ** → More exploitation.
 
 ![Softmax](docs/softmax.jpeg)  
 ![Softmax Sweep](docs/softmax_tau_sweep.jpeg)
