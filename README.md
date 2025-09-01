@@ -93,7 +93,7 @@ Special cases:
 
 - Selects arms probabilistically based on their estimated rewards.  
 - Uses a **temperature parameter τ**:  
-  <img src="https://render.githubusercontent.com/render/math?math=P(a)=\frac{e^{Q(a)/\tau}}{\sum_{j}e^{Q(j)/\tau}">
+  $$ P(a) = \frac{e^{Q(a)/\tau}}{\sum_{j} e^{Q(j)/\tau}} $$
 - **High τ** → More exploration.  
 - **Low τ** → More exploitation.  
 
@@ -104,7 +104,7 @@ Special cases:
 ### 5. **Annealed Softmax**
 
 - A variation of Softmax where the temperature $τ$ decreases over time:  
-  $$ \tau_t = \tau_0 \times \text{decay}^t $$
+  $$ \tau_t = \tau_0 \times \mathrm{decay}^t $$
 - Starts exploratory, then gradually becomes greedy.  
 
 ![Annealed Softmax](docs/annealed_softmax.jpeg)
